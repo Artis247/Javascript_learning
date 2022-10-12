@@ -1,4 +1,6 @@
 //Javascript_proxy
+let h =document. querySelector('#box1')
+h.innerHTML = "Javascript_proxy"
 
 
 
