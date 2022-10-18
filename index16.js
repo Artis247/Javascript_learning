@@ -18,16 +18,20 @@ const object = {
   age: 20
 }
 
+//JSON.stringify  и JSON.parse
+
 localStorage.setItem('person', JSON.stringify(object))
 
 const raw = localStorage.getItem('person')
+console.log(typeof raw,"raw", raw)
 const person = JSON.parse(raw)
+console.log(typeof person, "person", person)
 person.name = 'Denis'
 
 console.log(person)
-
+//Для синхронизации вкладок
 window.addEventListener('storage', event => {
-  console.log(event)
+  console.log("STORAGE",event)
 })
-
+//localStorage.clear()
 // window.onstorage = () => {}
