@@ -33,12 +33,12 @@ function calcValues(a, b) {
     }
   }
   const person2 = {
-    name: 'Max',
-    age: 20,
+    name: 'Den',
+    age: 30,
     
-    address2: {
+    address: {
       country: 'Russia',
-      city: 'Moscow'
+      city: 'SPb'
     }
   }
   const {name, age, car = 'Машины нет'} = person
@@ -47,10 +47,10 @@ function calcValues(a, b) {
 
   // const name = person.name
   const {
-    name2: firstName = 'Без имени',
+    name: firstName = 'Без имени',
     age: age2 =40 ,
     car:car2 = 'Машины нет',
-    address2: {city: homeTown, country}
+    address: {city: homeTown, country}
   } = person2
   
   console.log(firstName, age2, car2,homeTown, country)
