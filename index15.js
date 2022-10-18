@@ -15,36 +15,55 @@ function calcValues(a, b) {
   }
   
   const [sum, sub = 'Вычитания нет', mult, ...other] = calcValues(42, 10)
-  // const sum = result[0]
-  // const sub = result[1]
-  // const [sum, sub] = result
+//    const result2 =  calcValues(42, 10)
+//   const sum2 = result2[0]
+//   const sub2 = result2[1]
+//   const [sum2, sub2] = result
   
-  console.log(sum, mult, other, sub)
+  console.log( sum, mult, other, sub)
   
   // Objects
   const person = {
     name: 'Max',
     age: 20,
+    
     address: {
       country: 'Russia',
       city: 'Moscow'
     }
   }
-  
+  const person2 = {
+    name: 'Max',
+    age: 20,
+    
+    address2: {
+      country: 'Russia',
+      city: 'Moscow'
+    }
+  }
+  const {name, age, car = 'Машины нет'} = person
+  console.log(name, age, car)   //Max 20
+
+
   // const name = person.name
   const {
-    name: firstName = 'Без имени',
-    age,
-    car = 'Машины нет',
-    address: {city: homeTown, country}
-  } = person
+    name2: firstName = 'Без имени',
+    age: age2 =40 ,
+    car:car2 = 'Машины нет',
+    address2: {city: homeTown, country}
+  } = person2
   
-  // const {name, ...info} = person
-  // console.log(name, info)
-  
-  function logPerson({name: firstName = '111', age}) {
+  console.log(firstName, age2, car2,homeTown, country)
+  console.log(person2)
+ 
+  const {name:name3, ...info}= person
+  console.log("name3, ...info",name3, info)
+
+
+  function logPerson({name: firstName = '111', age = 30}) {
     console.log(firstName + ' ' + age)
   }
   
   
   logPerson(person)
+  logPerson(person2)
